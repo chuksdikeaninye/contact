@@ -144,7 +144,7 @@ if(isset($_POST['submit']))
 
        else {
          // echo "good"; we first used echo to test, then since it worked, we now set it to populate the query row in our database using the code below NB same comma order should be followed in both places
-        $query = "insert into messages(firstName,lastName,phoneNumber,emailAddress,message)VALUES('$firstName','$lastName','$phoneNumber','$emailAddress','$message')";
+        $query = "insert into hng(firstName,lastName,phoneNumber,emailAddress,message)VALUES('$firstName','$lastName','$phoneNumber','$emailAddress','$message')";
         // Else, if it didnt insert we use the !mysqli_connect funtion to ascertain 
         if (!mysqli_query($connect, $query)) {
           die('Error:'.mysqli_error($connect));
